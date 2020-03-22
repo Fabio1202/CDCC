@@ -1,0 +1,305 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #F7F3EA;
+    z-index: -3;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 360px) {
+    html, body {
+        font-size: 13px;
+    }
+}
+
+#landing {
+    width: 100vw;
+    height: 110vh;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Baloo 2', sans-serif;
+}
+
+#landing .background-image {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/Photo\ by\ Moises.png");
+    background-position: center center;
+    opacity: 0.80;
+    z-index: -2;
+}
+
+#landing .graphic-left {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-image: url("../images/Path.png");
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+#landing #navIcon{
+    width: 2.5rem;
+    height: 2rem;
+    display: block;
+    position: absolute;
+    right: 5vw;
+    top: 5vw;
+    margin: 0;
+}
+
+nav #closeNav {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    position: absolute;
+    right: 5vw;
+    top: 3vw;
+    margin: 0;
+}
+
+nav .navContent {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 7vh;
+    height: 55vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    color: #2B303A;
+}
+
+nav .navContent h1 {
+    margin:0;
+    font-family: "Baloo 2", sans-serif;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+nav .goToLogin {
+    width: 80%;
+    height: 3.5rem;
+    display: flex;
+    margin-left: 10%;
+    margin-top: 1.8rem;
+    background-color: #2B303A;
+    color: white;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav h3 {
+    width: 100%;
+    margin-top: 1rem;
+    font-family: "Baloo 2", sans-serif;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#landing h1 {
+    display: block;
+    font-size: 4.2rem;
+    letter-spacing: -0.15rem;
+    line-height: 3.2rem;
+    font-weight: 700;
+    color: #2B303A;
+    position: relative;
+    margin-left: 10vw;
+    margin-top: 25vh;
+    margin-bottom: 0;
+}
+
+#landing h2 {
+    display: block;
+    width: 50vw;
+    font-weight: 500;
+    margin-top: 1rem;
+    line-height: 1.3rem;
+    margin-left: 10vw;
+}
+
+nav {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: -100vw;
+    z-index: 100;
+    transition: all .5s ease-in-out; 
+}
+
+.whatIsIt {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 8rem;
+    font-family: "Baloo 2", sans-serif;
+}
+
+.whatIsIt h1 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: -0.15rem;
+}
+
+.whatIsIt h2 {
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: -0.1rem;
+    line-height: 2rem;
+}
+
+.firstStepVerify input {
+    margin: 0;
+    padding: 0;
+    background-color: #2B303A;
+    color:white;
+    font-family: 'Baloo 2', sans-serif;
+    display: block;
+    width: 70vw;
+    margin-left: 15vw;
+    height: 4rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5vw;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.firstStepVerify #submit {
+margin: 0;
+    padding: 0;
+    background-color: #2B303A;
+    color:white;
+    font-family: 'Baloo 2', sans-serif;
+    display: block;
+    width: 70vw;
+    margin-left: 15vw;
+    height: 4rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5vw;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: center;
+
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: 3rem;
+    height: 3rem;
+    width: 80vw;
+    margin-left: 10vw;
+    background-color: #D85F5E;
+    border-radius: 1rem;
+}
+
+.status {
+    font-family: "Baloo 2", sans-serif;
+    color: #2B303A;
+}
+
+.status h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    width: 100vw;
+    text-align: center;
+}
+
+.status h2 {
+    width: 80vw;
+    margin-left: 10vw;
+    font-weight: 500;
+    font-size: 2.8rem;
+}
+
+.status h3 {
+    width: 80vw;
+    margin-left: 10vw;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.rki input {
+    margin-top: 3rem;
+    color: white;
+    background-color: #2B303A
+}
+
+@media (min-width: 650px) {
+    #landing .graphic-left {
+        background-image: url("../images/PathDesktop.png");
+    }
+
+    #landing h1 {
+        font-size: 6rem;
+        line-height: 4.2rem;
+        margin-left: 30vw;
+    }
+
+    .firstStepVerify #submit {
+        width: 20vw;
+        margin-left: 40vw;
+    }
+
+    .firstStepVerify input {
+        width: 25vw;
+        margin-left: 37.5vw;
+    }
+
+    #landing h2 {
+        font-size: 3.4rem;
+        width: 35vw;
+        margin-top: 2rem;
+        line-height: 3rem;
+        margin-left: 30vw;
+    }
+
+    .whatIsIt {
+        width: 50vw;
+        margin-left: 25vw;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    #landing h1 {
+        font-size: 10rem;
+        line-height: 6.5rem;
+    }
+}

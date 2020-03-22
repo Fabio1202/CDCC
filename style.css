@@ -1,0 +1,164 @@
+
+body {
+     width: 375px;
+    margin: 0 auto;
+    background-color: #F7F3EA;
+}
+
+h1{
+     height: 200px;
+  color: #2B303A;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -2.26px;
+    line-height: 60px;
+}
+
+h2 {
+  height: 54px;
+  color: #2B303A;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -1.18px;
+  line-height: 54px;
+  text-align: center;
+    padding-top: 200px;
+}
+
+h3{
+    font-style: bold;
+    height: 54px;
+    margin-bottom: 15px;
+    height: 39px;
+  width: 128px;
+  color: #2B303A;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.83px;
+  line-height: 39px;
+}
+
+p { height: 125px;
+  color: #2B303A;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -1.61px;
+  line-height: 24px;
+}
+
+#introduction {
+    padding-bottom: 430px;
+    height: 124px;
+  width: 156px;
+  color: #2B303A;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -1.54px;
+  line-height: 20px;
+}
+
+
+p, p2, h1, h2, h3{
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.auf {height: 63px;
+  width: 18px;
+  color: #2B303A;
+  font-family: "Baloo 2";
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -2.57px;
+  line-height: 63px;
+  text-align: center;}
+
+.Nummer {
+box-sizing: border-box;
+  height: 69px;
+  width: 69px;
+  border-radius: 14px;
+  border: 3px solid #2B303A;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.square {
+        height: 200px;
+  background-color: #2B303A;
+    margin-bottom: 0px;
+}
+
+.teststatus{
+    height: 54px;
+  width: 317px;
+  border-radius: 14px;
+    margin-top: 50px;
+    margin: 0 auto; 
+  background-color: #D85F5E;
+}
+
+#anforderung {
+    color: white;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+}
+
+#impressum {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+#erhalten{
+    height: 124px;
+  width: 156px;
+  color: #2B303A;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -1.54px;
+  line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.Code {
+     height: 83px;
+  width: 279px;
+  border-radius: 5px;
+  background-color: #2B303A;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.antwort {
+    
+    margin-bottom: 30px;
+    margin-top: 20px;
+    height: 10px;
+}
+
+#ende {
+height: 54px;
+  width: 317px;
+  border-radius: 14px;
+  background-color: rgba(216,95,94,0.4);
+    margin: 0 auto; 
+    margin-top: 50px;
+}
+
+#endetext {
+    height: 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.05px;
+  line-height: 25px;
+  text-align: center;
+}
+
+#back {
+    text-align: center;
+    height: 20px;
+    font-size: 20px;
+  color: #2B303A;
+}

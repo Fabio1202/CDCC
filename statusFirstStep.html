@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2:400,500,600,700,800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body style="height: 100vh; overflow:none">
+    <nav>
+        <span id="closeNav"><svg xmlns="http://www.w3.org/2000/svg" width="43.409" height="43.409"
+                viewBox="0 0 43.409 43.409">
+                <g transform="translate(2.7046301 2.7046301)">
+                    <path fill="none" stroke="rgb(0,0,0)" stroke-width="2" d="M36 2.00576214L2 36" />
+                    <path fill="none" stroke="rgb(0,0,0)" stroke-width="2" d="M2.00010059 2l33.98056726 34" />
+                </g>
+            </svg></span>
+    
+        <div class="navContent">
+            <h1 onclick="window.location = '#'">Informationen</h1>
+            <h1 onclick="window.location = '#'">Teststelle finden</h1>
+            <h1 onclick="window.location = 'https://www.rki.de'">Robert-Koch-Institut</h1>
+            <h1 onclick="window.location = '#'">Datenschutz</h1>
+            <h1 onclick="window.location = '#'">Impressum</h1>
+        </div>
+    
+        <span class="goToLogin" onclick="window.location = 'statusFirstStep.html'">Teststatus einsehen</span>
+        <h3 onclick="window.location = 'rki.php'">Login für Behörden</h3>
+    </nav>
+
+    <div id="landing" style="height:120vh; overflow: none" class="firstStepVerify">
+        <span id="navIcon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 43.409 30.409">
+                <g transform="translate(4.7046301 4.7046301)">
+                    <path fill="none" stroke="rgb(255,255,255)" stroke-width="2" d="M34 0H0" />
+                    <path fill="none" stroke="rgb(255,255,255)" stroke-width="2" d="M34 10.5H0" />
+                    <path fill="none" stroke="rgb(255,255,255)" stroke-width="2" d="M34 21H0" />
+                </g>
+            </svg></span>
+        <span class="background-image" style="background-image: url('images/louis-reed-pwcKF7L4-no-unsplash.jpg');"></span>
+        <span class="graphic-left"></span>
+        <h1>GEBEN SIE<br />IHRE ID EIN</h1>
+        <h2>Sie haben Ihre Test-ID nach Ihrem Test per Mail oder SMS erhalten</h2>
+        <input type="number" name="token" id="token" onkeypress='validate(event, this)' placeholder="123456789">
+        <button type="button" name="submit" id="submit" onclick="ajax()">Teststatus anzeigen</button>
+    </div>
+
+    <script>
+        function ajax() {
+            let user = document.getElementById("token").value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    if(xhttp.responseText.replace(" ", "") == "true") {
+                        window.location = "statusSecondStep.html";
+                    } else {
+                        document.getElementById("token").value = "";
+                        alert(xhttp.responseText);
+                    }
+                }
+            };
+            xhttp.open("GET", "askStatus.php?user=" + user, true);
+            xhttp.send();
+        }
+
+            function validate(evt, d) {
+                    var theEvent = evt || window.event;
+
+                    // Handle paste
+                    if (theEvent.type === 'paste') {
+                        key = event.clipboardData.getData('text/plain');
+                    } else {
+                        // Handle key press
+                        var key = theEvent.keyCode || theEvent.which;
+                        key = String.fromCharCode(key);
+                    }
+                    var regex = /[0-9]|\./;
+                    if (!regex.test(key) || d.value.length == 9) {
+                        theEvent.returnValue = false;
+                        if (theEvent.preventDefault) theEvent.preventDefault();
+                    }
+                }
+    </script>
+</body>
+<script>
+    document.getElementById("navIcon").onclick = function () {
+        document.getElementsByTagName("nav")[0].style.left = 0;
+        document.getElementsByTagName("nav")[0].style.backgroundColor = "white";
+    };
+
+    document.getElementById("closeNav").onclick = function () {
+        document.getElementsByTagName("nav")[0].style.left = "-100vw";
+        document.getElementsByTagName("nav")[0].style.backgroundColor = "black";
+    };
+</script>
+</html>
